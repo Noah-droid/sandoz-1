@@ -1,0 +1,173 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+      integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Sandoz</title>
+  </head>
+  <body>
+    <section class="w-full h-full flex">
+      <div class="w-1/2 h-full relative">
+        <div class="bg-[#041C46]/80 relative w-full h-full">
+          <img
+            src="img/bert-b-rhNff6hB41s-unsplash 1.jpg"
+            alt=""
+            class="absolute w-full -z-10 h-full"
+          />
+          <div class="w-full h-full flex flex-col justify-center items-center">
+            <div class="w-1/2 flex flex-col gap-10">
+              <h1
+                class="text-7xl tracking-[15px] uppercase text-white font-bold text-center"
+              >
+                Sandoz
+              </h1>
+              <div
+                class="w-full flex flex-col items-center justify-center text-2xl"
+              >
+                <p class="text-white font-semibold">Compete AI:</p>
+                <p class="text-white text-center">
+                  Moderninzing Competitive <br />
+                  Inisghts with aI
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-1/2">
+        <div class="w-full h-full flex flex-col py-3">
+          <div class="w-full text-end px-5">
+            <p>
+              <span class="text-gray-500 font-medium">
+                Don't have an account?
+              </span>
+              <a href="" class="text-[#041C46] font-semibold underline"
+                >Sign up</a
+              >
+            </p>
+          </div>
+
+          <div class="h-[90%] flex flex-col justify-center px-20">
+            <div class="mt-10">
+              <h1 class="text-4xl text-gray-600 font-medium mb-7">Sign in</h1>
+              <div class="flex flex-col gap-1">
+                <label for="username" class="text-gray-700"
+                  >User name or email address</label
+                >
+                <input
+                  type="text"
+                  id="username"
+                  class="w-full h-12 border border-gray-300 outline-0 rounded-full px-5"
+                />
+              </div>
+              <div class="flex flex-col gap-1 my-3">
+                <div class="w-full flex justify-between">
+                  <label for="password" class="text-gray-700"
+                    >Your password</label
+                  >
+                  <div
+                    class="flex items-center gap-2 text-gray-600 hover:cursor-pointer"
+                  >
+                    <img
+                      id="toggle-password-visibility"
+                      src="img/eye.png"
+                      alt="eye"
+                      class="w-5"
+                    />
+                    <span id="toggle-password-text">Hide</span>
+                  </div>
+                </div>
+                <input
+                  type="text"
+                  id="password"
+                  class="w-full h-12 border border-gray-300 outline-0 rounded-full px-5"
+                />
+                <p class="text-end underline text-gray-600">
+                  Forget your password
+                </p>
+              </div>
+              <div>
+                <button
+                  class="w-1/2 py-4 bg-orange-400 text-white text-lg rounded-full"
+                >
+                  Sign in
+                </button>
+              </div>
+
+              <div class="flex items-center gap-3 my-5">
+                <hr class="w-1/2" />
+                <p class="text-center uppercase text-lg text-gray-700">OR</p>
+                <hr class="w-1/2" />
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-3">
+              <button
+                class="flex items-center justify-center rounded-full border border-gray-800 py-3 gap-2"
+              >
+                <img src="img/google.png" alt="google logo" class="w-10 h-10" />
+                <span class="text-gray-600 text-lg">Continue with Google</span>
+              </button>
+              <button
+                class="flex items-center justify-center rounded-full border border-gray-800 py-5 gap-3"
+              >
+                <img
+                  src="img/microsoft.png"
+                  alt="microsoft logo"
+                  class="w-5 h-5"
+                />
+                <span class="text-gray-600 text-lg"
+                  >Continue with Microsoft</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const passwordInput = document.getElementById("password");
+      const togglePasswordText = document.getElementById(
+        "toggle-password-text"
+      );
+      const togglePasswordVisibility = document.getElementById(
+        "toggle-password-visibility"
+      );
+
+      const openEyeImage = "img/9.png";
+      const closeEyeImage = "img/eye.png";
+
+      function toggleEyeImage() {
+        if (passwordInput.type === "password") {
+          togglePasswordVisibility.src = openEyeImage;
+        } else {
+          togglePasswordVisibility.src = closeEyeImage;
+        }
+      }
+
+      function togglePassword() {
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          togglePasswordText.textContent = "Hide";
+        } else {
+          passwordInput.type = "password";
+          togglePasswordText.textContent = "Show";
+        }
+        toggleEyeImage();
+      }
+
+      togglePasswordVisibility.addEventListener("click", togglePassword);
+      togglePasswordText.addEventListener("click", togglePassword);
+    </script>
+  </body>
+</html>

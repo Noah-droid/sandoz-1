@@ -1,0 +1,97 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+.card {
+    background: linear-gradient(153.32deg, rgba(255, 255, 255, 0.3) -65.62%, rgba(255, 255, 255, 0.1) 83.28%);
+    border: 5px solid #BCBCBCD9;
+    /* border-image-source: linear-gradient(142.08deg, rgba(255, 255, 255, 0.7) -5.03%, rgba(188, 188, 188, 0.85) 21.3%, rgba(92, 87, 114, 0.2) 49.04%, rgba(187, 187, 187, 0.5) 70.19%); */
+    /* border-radius: 20px; */
+    box-shadow: 0px 4px 24px -1px #00000033;
+    
+}
+
+.card2 {
+    background: rgba(255, 255, 255, 0.27);
+    border: 1px solid #EFEFEF;
+    box-shadow: 2px 4px 1px 0px #00000040;
+    /* border-radius: 40px;
+    backdrop-filter: blur(0px); */
+    /* width: fit-content; */
+    /* -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(255, 255, 255, 0.23);
+} 
+
+.btn1{
+    /* margin-top: -11em; */
+
+    transform: translateY(-100%);
+    
+    /* background-color: rgb(25, 25, 223);
+    height: 50px;
+    border-radius: 30px;
+    width: 15em;
+    border: rgb(77, 77, 228);
+    color: white; */
+    z-index: -99;
+    height: 50px;
+    width: 15em;
+  }
+
+  .box {
+    flex: auto;
+    flex-direction: column;
+    width: 20em;
+    height: 10em;
+    /* background-color: white; */
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 2px 2px rgb(224, 217, 217);
+    border-radius: 20px;
+    padding-left: 1em;
+    padding-right: 1em;
+
+
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.27);
+border-radius: 16px;
+/* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+background-color: rgba(255, 255, 255, 0.166);   
+-webkit-backdrop-filter: blur(5px);
+ backdrop-filter: blur(5px);
+ border: 1px solid white;
+}
+
+.circ1{
+    position: absolute;
+    background-color: rgba(98, 98, 253, 0.166);   
+    filter: blur(10px);
+    left: 0;
+    right: 0;
+    margin-left: 290px;
+    margin-top: -200px;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    z-index: 3;
+}
+.circ2{
+    position: absolute;
+    background-color: rgba(98, 98, 253, 0.166);   
+    filter: blur(9px);
+    right: 0;
+    margin-bottom: 100px;
+    bottom: 0;
+    margin-right: 250px;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    z-index: 3;
+}
